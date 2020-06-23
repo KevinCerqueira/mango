@@ -14,7 +14,6 @@ class UserDB{
         $password = mysqli_real_escape_string($this->database->getConnection(), $user['password']);
         $description = mysqli_real_escape_string($this->database->getConnection(), $user['description']);
         $nickname = strtolower($nickname);
-        
         $sql = "INSERT INTO user (nickname, password, description) VALUES (
             '$nickname',
             md5('$password'),
@@ -41,7 +40,7 @@ class UserDB{
         $result = $this->database->getResultFromQuery("SELECT user_ID FROM user WHERE nickname = '$nickname' AND password = md5('$password')");
         if($result->num_rows == 1){
             $row = $result->fetch_assoc();
-            return $row['ID'];
+            return $row['user_ID'];
         }else{
             return 0;
         }

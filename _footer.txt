@@ -1,0 +1,43 @@
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+<!-- <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+<!-- <script src="../../node_modules/jquery/dist/core.js"></script> -->
+<!-- <script src="../../node_modules/jquery/dist/jquery.js"></script> -->
+<!-- <script src="../../node_modules/jquery/dist/jquery.slim.js"></script> -->
+<!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script> -->
+<!-- <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script> -->
+
+<!-- Popover -->
+<!-- <script src="../../node_modules/exports/lib/exports.js"></script>
+<script src="../../node_modules/domify/index.js"></script>
+<script src="../../node_modules/debounce/index.js"></script>
+<script src="../../node_modules/emitter-component/index.js"></script>
+<script src="../../node_modules/popover/popover.js"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
+
+<!-- Ajax - JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+
+<!-- SweetAlert -->
+<!-- <script src="../../node_modules/sweetalert2/dist/sweetalert2.all.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+<!-- FontAwesome -->
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://kit.fontawesome.com/8dc881c5b9.js" crossorigin="anonymous"></script>
+
+<!-- MANGO JS -->
+<script src="../js/mango_register.js"></script>
+<script src="../js/mango_body.js"></script>
+<script src="../js/mango_interaction.js"></script>

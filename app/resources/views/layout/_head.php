@@ -14,16 +14,20 @@ if(!isset($_SESSION['ID'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- BootstrapCDN -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+
+    <!-- MANGO CSS -->
     <link rel="stylesheet" href="../css/mango_body.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://kit.fontawesome.com/8dc881c5b9.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    
     <link rel="icon" type="../img/creator.png" href="logo.png" />
 </head>
 
@@ -55,19 +59,10 @@ if(!isset($_SESSION['ID'])){
             </p>
         <?php else:?>
         <form method="POST" action="login.php" class="form-inline">
-            <input name="user" maxlength="15" minlength="4" class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Usuário" required>
-            <input name="password" minlength="6" maxlength="16" class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha" required>
+            <input name="user" maxlength="16" minlength="3" class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Usuário" required>
+            <input name="password" minlength="6" maxlength="12" class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha" required>
             <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Entrar</button>
         </form>
         <?php endif;?>
     </nav>
     <div class="container-fluid p-4">
-    <?php if(isset($_SESSION['erro_login'])):?>
-        <script>
-            Swal.fire(
-                'Login incorreto!',
-                '<?php echo $_SESSION['erro_login'];?>!',
-                'error'
-            );
-        </script>
-    <?php unset($_SESSION['erro_login']);endif;?>

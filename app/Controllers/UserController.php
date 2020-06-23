@@ -5,35 +5,32 @@ class UserController{
     public function createUser($data_user)
     {
         $user = new UserDB();
-        $nickname = $data_user['nickname'];
+        $nickname = strtolower($data_user['nickname']);
         $description = $data_user['description'];
-        
+        session_start();
         if($user->VALIDATION($nickname)){
-            session_start();
             $_SESSION['erro_register'] = 'Este nome já está sendo utilizado.';
             $_SESSION['nickname_login'] = $nickname;
             $_SESSION['description_login'] = $description;
             header('Location: index.php');
             exit();
         }elseif($data_user['password'] != $data_user['password1']){
-            session_start();
             $_SESSION['erro_register'] = 'As senhas devem ser iguais.';
             $_SESSION['nickname_login'] = $nickname;
             $_SESSION['description_login'] = $description;
             header('Location: index.php');
             exit();
         }else{
-            session_start();
             $user_ID = $user->INSERT($data_user);
             $_SESSION['ID'] = $user_ID;
             header('Location: index.php');
             exit();
         }
     }
-    public function validateLogin($user_name, $password)
+    public function validateLogin($nickname, $password)
     {
         $user = new UserDB();
-        $result = $user->SELECT_LOGIN($user_name, $password);
+        $result = $user->SELECT_LOGIN(strtolower($nickname), $password);
         if($result == 0){
             $_SESSION['erro_login'] = 'Usuário e/ou senha incorreta(s)';
             header('Location: index.php');

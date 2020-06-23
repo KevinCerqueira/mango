@@ -29,7 +29,7 @@ class PostDB{
         return $this->database->executeSQL($sql);
     }
     public function GET_POSTS(){
-        $result = $this->database->getResultFromQuery("SELECT * FROM post, type_post WHERE post.type = type_post.type_post_ID ORDER BY date, time");
+        $result = $this->database->getResultFromQuery("SELECT * FROM post, type_post WHERE post.type = type_post.type_post_ID ORDER BY date, time DESC");
         if($result->num_rows < 1){
             return null;
         }

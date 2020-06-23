@@ -109,16 +109,16 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-insert into root (user, password, permission) values ('vyN', md5('@MyMango157'), 0);
-insert into user (nickname, password) values ('Kevin', md5('@KevinTheCreator'));
+insert into root (user, password, permission) values ('výN', md5('@MyMango157'), 0);
+insert into user (nickname, password) values ('kevin', md5('@KNBTheCreator'));
 insert into type_post (type_post_ID, type_name, alternative_name, icon) values 
-(0, 'light', 'Postshit', '<i class="fas fa-location-arrow text-dark"></i>'),
+(0, 'info', 'Postshit', '<i class="fas fa-location-arrow text-dark"></i>'),
 (1, 'warning', 'Aviso', '<i class="fas fa-exclamation text-dark"></i>'),
-(2, 'info', 'Informativo', '<i class="fas fa-info-circle text-dark"></i>'),
+(2, 'success', 'Informativo', '<i class="fas fa-info-circle text-dark"></i>'),
 (3, 'primary', 'AD', '<i class="fas fa-audio-description text-dark"></i></i>'),
 (4, 'danger', 'Perigo', '<i class="fas fa-exclamation-triangle text-dark"></i>')
 ;
-insert into post (title, body, type, user_ID, date, time) values 
-('este é 1', 'este é o corpo do 1 warning',1, 1, '2020-03-12', '08:12:00'),
-('este é 2', 'este é o corpo do 2 info',3, 1, '2020-03-12', '08:13:00'),
-('este é 3', 'este é o corpo do 3 normal',2, 1, '2020-03-12', '08:12:00');
+-- insert into post (title, body, type, user_ID, date, time) values 
+-- ('este é 1', 'este é o corpo do 1 warning',1, 1, '2020-03-12', '08:12:00'),
+-- ('este é 2', 'este é o corpo do 2 info',3, 1, '2020-03-12', '08:13:00'),
+-- ('este é 3', 'este é o corpo do 3 normal',2, 1, '2020-03-12', '08:12:00');
